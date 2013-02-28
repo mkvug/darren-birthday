@@ -1,0 +1,16 @@
+$(document).ready(function () {
+	$(document).on("click",".portfolioli-infolink", function(){
+		var imgHeight, imgWidth;
+		imgHeight = $(this).parent().children("img")[0].height;
+		imgWidth = $(this).parent().children("img")[0].width;
+		debugger;
+		$(this).parent().children(".portfolioli-info").css("height",imgHeight);
+		$(this).parent().children(".portfolioli-info").css("width",imgWidth);
+		$(this).parent().children(".portfolioli-info").fadeIn();
+		$(this).fadeOut();
+	});
+	$(document).on("click",".portfolioli-info a", function(){
+		$(this).parent().fadeOut();
+		$(this).parent().parent().children(".portfolioli-infolink").fadeIn;
+	});
+});
